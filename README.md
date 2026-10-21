@@ -1,76 +1,34 @@
-# new-api-docs-v1
+# 集智AI 操作手册
 
-A Next.js documentation site for New API.
+集智AI 是自托管的 AI 网关：把多家上游大模型聚合到统一 API 之后，客户端只需要一个地址和一个密钥，即可使用全部已接入的模型。
 
-## Development
+| 入口 | 地址 |
+| --- | --- |
+| 控制台（注册、创建密钥、查用量） | <https://th.jimei.cn> |
+| API 地址（OpenAI 兼容客户端） | `https://th.jimei.cn/v1` |
+| API 地址（Anthropic 协议客户端，如 Claude Code） | `https://th.jimei.cn` |
 
-Run the development server:
+本手册只讲三件事：**怎么拿密钥、怎么在客户端里配、怎么调用和查用量**。
 
-```bash
-bun install
+## 目录
 
-bun dev
-```
+| 章节 | 内容 |
+| --- | --- |
+| [1. 获取 API 密钥](docs/01-api-key.md) | 在控制台创建、管理 `sk-` 密钥 |
+| [2. 客户端配置](docs/02-clients.md) | Claude Code、Codex CLI、Cursor、Cherry Studio、ChatBox、LobeChat、OpenAI/Anthropic SDK |
+| [3. 接口调用](docs/03-api.md) | 端点列表、curl 示例、流式输出 |
+| [4. 额度与用量](docs/04-quota-usage.md) | 余额、充值、调用日志、价格查询 |
+| [5. 常见问题](docs/05-faq.md) | 401 / 404 / 503 / 余额不足等排查 |
 
-Open http://localhost:3000 with your browser to see the result.
+## 三步上手
 
-## Build
+1. 登录[控制台](https://th.jimei.cn)，在「API 密钥」页创建一个密钥并**立即复制**（只显示一次）；
+2. 打开 [第 2 章](docs/02-clients.md)，把地址和密钥填进你正在用的客户端；
+3. 用 [第 3 章](docs/03-api.md)的示例发起第一次对话。
 
-Build the application for production:
+> [!WARNING]
+> 密钥等同于账户密码：不要提交进代码仓库、不要截图外发。怀疑泄露时，先在控制台**禁用**该密钥。
 
-```bash
-bun run build
-```
+---
 
-## SEO and canonical domain
-
-The canonical documentation origin defaults to `https://docs.newapi.ai`, including
-local builds and preview deployments. Set `SITE_URL` **before building** to choose
-another canonical domain, for example `SITE_URL=https://docs.newapi.pro`.
-Use a full HTTP(S) origin without a path, query, or fragment.
-
-All page canonicals, language alternates, sharing metadata, structured data,
-`sitemap.xml`, and `robots.txt` use that origin. When one build is served on both
-domains, both use the same canonical origin to consolidate duplicate pages.
-Official website links to `www.newapi.ai` and `www.newapi.pro` remain visible on
-the homepage, quick start pages, and shared footer.
-
-SEO browser checks run against a production build:
-
-```bash
-bunx next build
-bun run test:seo:browser
-```
-
-Use `PLUGIN_TEST_BROWSER_CHANNEL=chrome` for installed Chrome, as below.
-
-## Plugin marketplace checks
-
-```bash
-bun run test:plugins
-bunx next build # skips the changelog-writing prebuild hook
-bunx playwright install chromium
-bun run test:plugins:browser
-```
-
-Browser tests start the production server on port 3100 and mock catalog data.
-To use an installed Chrome instead of downloading Chromium, run
-`PLUGIN_TEST_BROWSER_CHANNEL=chrome bun run test:plugins:browser`.
-
-The marketplace reads the matching official `.pro` or `.ai` site at request time;
-building the docs does not fetch the plugin catalog. Installation URLs always
-point to the official site. Local previews use `.ai`.
-
-## Project Structure
-
-| Path                          | Description                  |
-| ----------------------------- | ---------------------------- |
-| `src/app/[lang]/(home)`       | Landing page and home pages  |
-| `src/app/[lang]/docs`         | Documentation pages (i18n)   |
-| `src/app/api/search/route.ts` | Search API endpoint          |
-| `content/docs/`               | Documentation content (MDX)  |
-| `src/lib/source.ts`           | Content source configuration |
-
-## Learn More
-
-- [Next.js Documentation](https://nextjs.org/docs) - Next.js features and API
+集智AI 网关基于开源项目 [new-api](https://github.com/QuantumNous/new-api) 二次开发。
