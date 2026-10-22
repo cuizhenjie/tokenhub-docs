@@ -1,4 +1,9 @@
-# 1. 获取 API 密钥
+---
+title: 1. 获取 API 密钥
+description: 在集智AI 控制台创建、管理 sk- 密钥
+sidebar:
+  order: 1
+---
 
 所有客户端里填的「API Key / Token / 密钥」，都是集智AI 控制台签发的 `sk-` 开头字符串。上游厂商的 Key 由管理员在服务端配置，**用户侧永远只使用集智AI 签发的密钥**。
 

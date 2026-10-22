@@ -1,4 +1,9 @@
-# 3. 接口调用
+---
+title: 3. 接口调用
+description: 端点列表、curl 示例、流式输出
+sidebar:
+  order: 3
+---
 
 ## 认证方式
 

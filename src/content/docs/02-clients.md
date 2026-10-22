@@ -1,4 +1,9 @@
-# 2. 客户端配置
+---
+title: 2. 客户端配置
+description: Claude Code、Codex CLI、Cursor、Cherry Studio、ChatBox、LobeChat、OpenAI/Anthropic SDK
+sidebar:
+  order: 2
+---
 
 先记住两组地址，绝大多数问题都出在地址填错：
 
@@ -7,7 +12,7 @@
 | OpenAI 兼容客户端（绝大多数） | `https://th.jimei.cn/v1`（**带** `/v1`） | `sk-` 密钥 |
 | Anthropic 协议客户端（Claude Code、Anthropic SDK） | `https://th.jimei.cn`（**不带** `/v1`） | `sk-` 密钥 |
 
-**模型名**以控制台「模型广场」或 [`GET /v1/models`](03-api.md#查询可用模型) 返回的为准，填错会报「无可用渠道」。
+**模型名**以控制台「模型广场」或 [`GET /v1/models`](../03-api/#查询可用模型) 返回的为准，填错会报「无可用渠道」。
 
 ---
 
@@ -36,7 +41,7 @@ export ANTHROPIC_AUTH_TOKEN=sk-xxxxxxxx
 
 - 模型可用 `/model` 命令切换，或用 `ANTHROPIC_MODEL` 环境变量指定。
 - 验证：`claude -p "你好"`，正常回复即接入成功。
-- 报 401 先检查密钥；报 503「无可用渠道」见[第 5 章](05-faq.md)。
+- 报 401 先检查密钥；报 503「无可用渠道」见[第 5 章](../05-faq/)。
 
 ## Codex CLI
 
