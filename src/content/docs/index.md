@@ -1,5 +1,5 @@
 ---
-title: 集智AI 操作手册
+title: 集智AI Lens 操作手册
 description: 一个地址、一个密钥，使用全部已接入的大模型
 template: splash
 hero:

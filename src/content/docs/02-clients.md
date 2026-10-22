@@ -52,7 +52,7 @@ model_provider = "jizhi"
 model = "你的模型名"
 
 [model_providers.jizhi]
-name = "Jizhi AI"
+name = "Jizhi AI Lens"
 base_url = "https://th.jimei.cn/v1"
 env_key = "JIZHI_API_KEY"
 wire_api = "chat"
@@ -159,5 +159,5 @@ print(msg.content[0].text)
 任何支持「自定义 OpenAI 接口地址」的工具（沉浸式翻译、Open WebUI、Dify、RAGFlow、LangChain 等）都可以接入，只需要三样东西：
 
 1. **API 地址**：`https://th.jimei.cn/v1`
-2. **API Key**：集智AI 签发的 `sk-` 密钥
+2. **API Key**：集智AI Lens 签发的 `sk-` 密钥
 3. **模型名**：从「模型广场」或 `/v1/models` 获取

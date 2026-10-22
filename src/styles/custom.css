@@ -1,0 +1,26 @@
+/* 集智AI Lens —— 品牌 API 文档主题 */
+
+/* 品牌色：#1d7fba ≈ hsl(203, 72%, 42%) */
+:root {
+  --sl-hue-accent: 203;
+  --sl-sat-accent: 72%;
+  --sl-content-width: 50rem;
+}
+
+/* 深色模式用更亮的青蓝（#1aa8d3），保证对比度 */
+html.dark {
+  --sl-hue-accent: 195;
+  --sl-sat-accent: 75%;
+}
+
+/* 端点/参数标识更接近 API 参考文档的排版 */
+.sl-markdown-content table code {
+  white-space: nowrap;
+  font-size: 0.85em;
+}
+
+/* 顶部站点标题与 logo 对齐观感 */
+.site-title {
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
