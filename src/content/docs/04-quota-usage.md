@@ -26,11 +26,11 @@ sidebar:
 
 ```bash
 # 密钥对应的总额度（hard_limit_usd，美元）
-curl --fail-with-body https://th.jimei.cn/v1/dashboard/billing/subscription \
+curl --fail-with-body https://th.3cool.cc/v1/dashboard/billing/subscription \
   -H "Authorization: Bearer ${JIZHI_API_KEY}"
 
 # 已用额度（total_usage，单位为美分，除以 100 即美元）
-curl --fail-with-body "https://th.jimei.cn/v1/dashboard/billing/usage" \
+curl --fail-with-body "https://th.3cool.cc/v1/dashboard/billing/usage" \
   -H "Authorization: Bearer ${JIZHI_API_KEY}"
 ```
 

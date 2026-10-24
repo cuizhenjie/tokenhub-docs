@@ -5,7 +5,7 @@ sidebar:
   order: 5
 ---
 
-按客户端里看到的报错对号入座。
+按客户端里看到的报错对号入座。计费、模型差异、限流等「不报错但和预期不符」的问题见[第 6 章 中转站使用避坑](../06-relay-faq/)。
 
 ## 「无效的令牌」/ 401 Unauthorized
 
@@ -46,9 +46,9 @@ sidebar:
 
 接口路径不对，九成是 Base URL 填错：
 
-- OpenAI 兼容客户端的地址必须**带** `/v1`：`https://th.jimei.cn/v1`；
-- Anthropic 协议客户端（Claude Code、Anthropic SDK）的地址**不带** `/v1`：`https://th.jimei.cn`；
-- 自建部署的其他站点地址不适用于本站，客户端里请统一填 `th.jimei.cn`。
+- OpenAI 兼容客户端的地址必须**带** `/v1`：`https://th.3cool.cc/v1`；
+- Anthropic 协议客户端（Claude Code、Anthropic SDK）的地址**不带** `/v1`：`https://th.3cool.cc`；
+- 自建部署的其他站点地址不适用于本站，客户端里请统一填 `th.3cool.cc`。
 
 ## Claude Code 配置不生效
 

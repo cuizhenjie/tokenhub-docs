@@ -32,7 +32,7 @@ export JIZHI_API_KEY=sk-xxxxxxxx   # 下文示例直接引用
 ## 查询可用模型
 
 ```bash
-curl --fail-with-body https://th.jimei.cn/v1/models \
+curl --fail-with-body https://th.3cool.cc/v1/models \
   -H "Authorization: Bearer ${JIZHI_API_KEY}"
 ```
 
@@ -41,7 +41,7 @@ curl --fail-with-body https://th.jimei.cn/v1/models \
 ## 对话（OpenAI 格式）
 
 ```bash
-curl --fail-with-body https://th.jimei.cn/v1/chat/completions \
+curl --fail-with-body https://th.3cool.cc/v1/chat/completions \
   -H "Authorization: Bearer ${JIZHI_API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{
@@ -55,7 +55,7 @@ curl --fail-with-body https://th.jimei.cn/v1/chat/completions \
 加 `"stream": true` 即可，返回 SSE 流：
 
 ```bash
-curl --fail-with-body https://th.jimei.cn/v1/chat/completions \
+curl --fail-with-body https://th.3cool.cc/v1/chat/completions \
   -H "Authorization: Bearer ${JIZHI_API_KEY}" \
   -H "Content-Type: application/json" \
   -d '{
@@ -70,7 +70,7 @@ curl --fail-with-body https://th.jimei.cn/v1/chat/completions \
 走 `/v1/messages`，请求体为 Anthropic Messages 格式：
 
 ```bash
-curl --fail-with-body https://th.jimei.cn/v1/messages \
+curl --fail-with-body https://th.3cool.cc/v1/messages \
   -H "x-api-key: ${JIZHI_API_KEY}" \
   -H "anthropic-version: 2023-06-01" \
   -H "Content-Type: application/json" \
@@ -85,10 +85,10 @@ curl --fail-with-body https://th.jimei.cn/v1/messages \
 
 ```bash
 # 密钥对应的总额度（hard_limit_usd，美元）
-curl --fail-with-body https://th.jimei.cn/v1/dashboard/billing/subscription \
+curl --fail-with-body https://th.3cool.cc/v1/dashboard/billing/subscription \
   -H "Authorization: Bearer ${JIZHI_API_KEY}"
 
 # 已用额度（total_usage，单位为美分，除以 100 即美元）
-curl --fail-with-body "https://th.jimei.cn/v1/dashboard/billing/usage" \
+curl --fail-with-body "https://th.3cool.cc/v1/dashboard/billing/usage" \
   -H "Authorization: Bearer ${JIZHI_API_KEY}"
 ```

@@ -9,8 +9,8 @@ sidebar:
 
 | 客户端类型 | Base URL | 密钥 |
 | --- | --- | --- |
-| OpenAI 兼容客户端（绝大多数） | `https://th.jimei.cn/v1`（**带** `/v1`） | `sk-` 密钥 |
-| Anthropic 协议客户端（Claude Code、Anthropic SDK） | `https://th.jimei.cn`（**不带** `/v1`） | `sk-` 密钥 |
+| OpenAI 兼容客户端（绝大多数） | `https://th.3cool.cc/v1`（**带** `/v1`） | `sk-` 密钥 |
+| Anthropic 协议客户端（Claude Code、Anthropic SDK） | `https://th.3cool.cc`（**不带** `/v1`） | `sk-` 密钥 |
 
 **模型名**以控制台「模型广场」或 [`GET /v1/models`](../03-api/#查询可用模型) 返回的为准，填错会报「无可用渠道」。
 
@@ -23,7 +23,7 @@ Claude Code 走 Anthropic 协议，注意 Base URL **不带 `/v1`**。
 方式一：环境变量（当前终端会话）
 
 ```bash
-export ANTHROPIC_BASE_URL=https://th.jimei.cn
+export ANTHROPIC_BASE_URL=https://th.3cool.cc
 export ANTHROPIC_AUTH_TOKEN=sk-xxxxxxxx
 ```
 
@@ -32,7 +32,7 @@ export ANTHROPIC_AUTH_TOKEN=sk-xxxxxxxx
 ```json
 {
   "env": {
-    "ANTHROPIC_BASE_URL": "https://th.jimei.cn",
+    "ANTHROPIC_BASE_URL": "https://th.3cool.cc",
     "ANTHROPIC_AUTH_TOKEN": "sk-xxxxxxxx",
     "ANTHROPIC_MODEL": "你的模型名"
   }
@@ -53,7 +53,7 @@ model = "你的模型名"
 
 [model_providers.jizhi]
 name = "Jizhi AI Lens"
-base_url = "https://th.jimei.cn/v1"
+base_url = "https://th.3cool.cc/v1"
 env_key = "JIZHI_API_KEY"
 wire_api = "chat"
 ```
@@ -69,7 +69,7 @@ export JIZHI_API_KEY=sk-xxxxxxxx
 ## Cursor
 
 1. 打开 **Settings → Models**，找到 **OpenAI API Key** 区域。
-2. 勾选 **Override OpenAI Base URL**，填 `https://th.jimei.cn/v1`。
+2. 勾选 **Override OpenAI Base URL**，填 `https://th.3cool.cc/v1`。
 3. 填入 `sk-` 密钥，在模型列表中 **Add model** 手动添加要用的模型名（与 `/v1/models` 一致）。
 4. 点击 **Verify** 验证通过后保存。
 
@@ -78,7 +78,7 @@ export JIZHI_API_KEY=sk-xxxxxxxx
 ## Cherry Studio
 
 1. **设置 → 模型服务**，点击底部 **添加**，选择 **OpenAI-API 兼容**。
-2. API 地址填 `https://th.jimei.cn/v1`（若你所用版本会自动补全 `/v1`，则只填 `https://th.jimei.cn`）。
+2. API 地址填 `https://th.3cool.cc/v1`（若你所用版本会自动补全 `/v1`，则只填 `https://th.3cool.cc`）。
 3. 填入 API 密钥。
 4. 在该服务商下 **添加模型**，模型 ID 必须与 `/v1/models` 返回的完全一致。
 5. 保存后在模型列表点 **检查连通性** 测试。
@@ -87,13 +87,13 @@ export JIZHI_API_KEY=sk-xxxxxxxx
 
 1. **设置 → 模型 → 添加自定义提供方**。
 2. API 类型选择 **OpenAI API 兼容**。
-3. API 域名填 `https://th.jimei.cn/v1`，填入 API 密钥。
+3. API 域名填 `https://th.3cool.cc/v1`，填入 API 密钥。
 4. 在提供方下 **添加自定义模型**，填入模型名后保存测试。
 
 ## LobeChat
 
 1. **设置 → 语言模型 → OpenAI**。
-2. API 代理地址填 `https://th.jimei.cn/v1`，填入 API Key。
+2. API 代理地址填 `https://th.3cool.cc/v1`，填入 API Key。
 3. 在模型列表中添加要使用的模型名，保存后对话时选择该模型。
 
 ## Python（OpenAI SDK）
@@ -106,7 +106,7 @@ from openai import OpenAI
 
 client = OpenAI(
     api_key=os.environ["JIZHI_API_KEY"],
-    base_url="https://th.jimei.cn/v1",
+    base_url="https://th.3cool.cc/v1",
 )
 
 resp = client.chat.completions.create(
@@ -123,7 +123,7 @@ import OpenAI from "openai";
 
 const client = new OpenAI({
   apiKey: process.env.JIZHI_API_KEY,
-  baseURL: "https://th.jimei.cn/v1",
+  baseURL: "https://th.3cool.cc/v1",
 });
 
 const resp = await client.chat.completions.create({
@@ -143,7 +143,7 @@ import anthropic
 
 client = anthropic.Anthropic(
     api_key=os.environ["JIZHI_API_KEY"],
-    base_url="https://th.jimei.cn",
+    base_url="https://th.3cool.cc",
 )
 
 msg = client.messages.create(
@@ -158,6 +158,6 @@ print(msg.content[0].text)
 
 任何支持「自定义 OpenAI 接口地址」的工具（沉浸式翻译、Open WebUI、Dify、RAGFlow、LangChain 等）都可以接入，只需要三样东西：
 
-1. **API 地址**：`https://th.jimei.cn/v1`
+1. **API 地址**：`https://th.3cool.cc/v1`
 2. **API Key**：集智AI Lens 签发的 `sk-` 密钥
 3. **模型名**：从「模型广场」或 `/v1/models` 获取

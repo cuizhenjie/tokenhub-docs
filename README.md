@@ -6,11 +6,11 @@
 
 | 入口 | 地址 |
 | --- | --- |
-| 控制台（注册、创建密钥、查用量） | <https://th.jimei.cn> |
-| API 地址（OpenAI 兼容客户端） | `https://th.jimei.cn/v1` |
-| API 地址（Anthropic 协议客户端，如 Claude Code） | `https://th.jimei.cn` |
+| 控制台（注册、创建密钥、查用量） | <https://th.3cool.cc> |
+| API 地址（OpenAI 兼容客户端） | `https://th.3cool.cc/v1` |
+| API 地址（Anthropic 协议客户端，如 Claude Code） | `https://th.3cool.cc` |
 
-本手册只讲三件事：**怎么拿密钥、怎么在客户端里配、怎么调用和查用量**。
+本手册覆盖：**怎么拿密钥、怎么在客户端里配、怎么调用和查用量，以及高频操作与常见避坑**。
 
 ## 目录
 
@@ -20,11 +20,13 @@
 | [2. 客户端配置](src/content/docs/02-clients.md) | Claude Code、Codex CLI、Cursor、Cherry Studio、ChatBox、LobeChat、OpenAI/Anthropic SDK |
 | [3. 接口调用](src/content/docs/03-api.md) | 端点列表、curl 示例、流式输出 |
 | [4. 额度与用量](src/content/docs/04-quota-usage.md) | 余额、充值、调用日志、价格查询 |
-| [5. 常见问题](src/content/docs/05-faq.md) | 401 / 404 / 503 / 余额不足等排查 |
+| [5. 常见问题](src/content/docs/05-faq.md) | 401 / 404 / 503 / 余额不足等报错排查 |
+| [6. 中转站使用避坑](src/content/docs/06-relay-faq.md) | 额度倍率、计费差异、模型差异、限流与隐私 |
+| [7. 高频操作速查](src/content/docs/07-quick-ops.md) | 控制台路径 + 一行命令：查余额、日志排查、切模型 |
 
 ## 三步上手
 
-1. 登录[控制台](https://th.jimei.cn)，在「API 密钥」页创建一个密钥并**立即复制**（只显示一次）；
+1. 登录[控制台](https://th.3cool.cc)，在「API 密钥」页创建一个密钥并**立即复制**（只显示一次）；
 2. 打开 [第 2 章](src/content/docs/02-clients.md)，把地址和密钥填进你正在用的客户端；
 3. 用 [第 3 章](src/content/docs/03-api.md)的示例发起第一次对话。
 

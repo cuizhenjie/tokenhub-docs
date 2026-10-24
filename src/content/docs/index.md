@@ -20,15 +20,17 @@ sidebar:
 
 | 入口 | 地址 |
 | --- | --- |
-| 控制台（注册、创建密钥、查用量） | <https://th.jimei.cn> |
-| API 地址（OpenAI 兼容客户端） | `https://th.jimei.cn/v1` |
-| API 地址（Anthropic 协议客户端，如 Claude Code） | `https://th.jimei.cn` |
+| 控制台（注册、创建密钥、查用量） | <https://th.3cool.cc> |
+| API 地址（OpenAI 兼容客户端） | `https://th.3cool.cc/v1` |
+| API 地址（Anthropic 协议客户端，如 Claude Code） | `https://th.3cool.cc` |
 
 ## 三步上手
 
-1. 登录[控制台](https://th.jimei.cn)，在「API 密钥」页创建一个密钥并**立即复制**（只显示一次）；
+1. 登录[控制台](https://th.3cool.cc)，在「API 密钥」页创建一个密钥并**立即复制**（只显示一次）；
 2. 打开 [第 2 章](02-clients/)，把地址和密钥填进你正在用的客户端；
 3. 用 [第 3 章](03-api/)的示例发起第一次对话。
+
+日常查余额、充值、排障看 [高频操作速查](07-quick-ops/)；对计费、模型差异有疑问先读 [中转站使用避坑](06-relay-faq/)。
 
 :::caution[密钥安全]
 密钥等同于账户密码：不要提交进代码仓库、不要截图外发。怀疑泄露时，先在控制台**禁用**该密钥。
